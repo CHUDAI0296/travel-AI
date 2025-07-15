@@ -30,7 +30,7 @@ export const AIChat: React.FC<AIChatProps> = ({ isCompact = false, userLocation 
 
   const openai = new OpenAI({
     baseURL: "https://openrouter.ai/api/v1",
-    apiKey: "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", // Replace with your actual OpenRouter API key
+    apiKey: import.meta.env.VITE_OPENROUTER_API_KEY, // 从环境变量中读取 API 密钥
     dangerouslyAllowBrowser: true, // Required for client-side usage
     defaultHeaders: {
       "HTTP-Referer": "http://localhost:5173/", // Replace with your actual site URL
